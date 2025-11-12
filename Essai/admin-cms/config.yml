@@ -1,0 +1,38 @@
+backend:
+  name: git-gateway    # plus simple avec Netlify Identity (voir étape 2)
+  branch: main
+media_folder: "Essai/uploads"
+public_folder: "/uploads"
+
+# Pas d’aperçu (on édite les fichiers bruts)
+editor:
+  preview: false
+
+collections:
+  - name: "pages"
+    label: "Pages HTML"
+    files:
+      - label: "Accueil (index.html)"
+        name: "index"
+        file: "Essai/index.html"
+        fields:
+          - { label: "Contenu HTML", name: "body", widget: "code", default: "", modes: ["html"] }
+
+      - label: "Administration (admin.html)"
+        name: "admin"
+        file: "Essai/admin.html"
+        fields:
+          - { label: "Contenu HTML", name: "body", widget: "code", default: "", modes: ["html"] }
+
+      - label: "Connexion (login.html)"
+        name: "login"
+        file: "Essai/login.html"
+        fields:
+          - { label: "Contenu HTML", name: "body", widget: "code", default: "", modes: ["html"] }
+
+      # ➜ ajoute ici tes autres pages :
+      # - label: "Nom de la page"
+      #   name: "nom"
+      #   file: "Essai/ma-page.html"
+      #   fields:
+      #     - { label: "Contenu HTML", name: "body", widget: "code", modes: ["html"] }
